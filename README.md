@@ -2,26 +2,18 @@
 
 A very simple Firefox extension for reading premium articles in the [thelocal.de](http://www.thelocal.de).
 
-**PSA: If you can please support your favorite websites or at least whitelist them from your ad-blocker. Thank you**
+**PSA: If you can, please support your favorite websites or at least whitelist them from your ad-blocker. Thank you**
 
 DISCLAIMER: I do not condone nor encourage the use.... ah who I am kidding? Information should be free!
 
 ## To install
 
-To build the plugin you need to install [web-ext](https://github.com/mozilla/web-ext), which can be installed from `npm` with:
+You should go and install it directly from the [Firefox Add-ons Store](https://addons.mozilla.org/en-US/firefox/addon/thelocal-de-free/)
 
-```
-npm install --global web-ext
-```
+If you don't want to do that for some reason, or you simply can't you can also install it using the [about:debugging](about:debugging) page.
 
-After you have web-ext installed, simply run build subcommand in this directory:
+Open that page in your firefox and select **Load Temporary Add-on** then navigate to the directory where you cloned the repository, and click any of the files contained in the `manifest.json`.
 
-```
-web-ext build
-```
+The only caveat of installing it this way is that when you close Firefox, the add-on is no longer installed, and you would have to repeat the process.
 
-This will package the extension as a `.zip` file in a directory named `web-ext-artifacts/`. 
-
-Then open [about:addons](about:addons) in Firefox, click the gearbox icon to get the drop-down menu and select **Install Add-on from File**, finally select the generated zip file. That's it!
-
-Now enjoy the articles for free (while you can) from this excellent website.
+Now enjoy the articles for free (*while you can*)!
