@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "the_local_de_free",
-  "version": "1.0",
+  "version": "1.1",
 
   "description": "Removes the modal window for paying in members-only in thelocal.de.",
 
@@ -12,7 +12,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.thelocal.de/*"],
+      "matches": ["*://*.thelocal.[com|at|dk|fr|de|it|no|es|se|ch]/*"],
       "js": ["remove_subscribe.js"]
     }
   ],
