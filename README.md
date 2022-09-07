@@ -1,5 +1,9 @@
 # the_local_de_free
 
+[![Lint and
+Build](https://github.com/chibby0ne/the_local_de_free/actions/workflows/lint_and_build.yml/badge.svg)](https://github.com/chibby0ne/the_local_de_free/actions/workflows/lint_and_build.yml)
+[![Release](https://github.com/chibby0ne/the_local_de_free/actions/workflows/publish.yml/badge.svg)](https://github.com/chibby0ne/the_local_de_free/actions/workflows/publish.yml)
+
 A very simple Firefox extension for reading premium articles in the
 [thelocal.de](http://www.thelocal.de).
 
