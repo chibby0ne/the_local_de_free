@@ -1,5 +1,5 @@
-# Build
-name: "Build"
+# Lint
+name: "Lint and Build"
 on:
   push:
     branches:
@@ -7,6 +7,19 @@ on:
   pull_request:
 
 jobs:
+  lint:
+    name: "Lint"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v1
+
+      - name: "web-ext lint"
+        uses: kewisch/action-web-ext@v1
+        with:
+          cmd: lint
+          source: .
+          channel: listed
   build:
     name: "Build"
     runs-on: ubuntu-latest
@@ -19,7 +32,7 @@ jobs:
         uses: kewisch/action-web-ext@v1
         with:
           cmd: build
-          source: src
+          source: .
           filename: "{name}-{version}.xpi"
 
       - name: "Upload Artifact"
