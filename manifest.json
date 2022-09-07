@@ -2,9 +2,9 @@
 
   "manifest_version": 2,
   "name": "the_local_de_free",
-  "version": "1.1",
+  "version": "1.2",
 
-  "description": "Removes the modal window for paying in members-only in thelocal.de.",
+  "description": "Removes the modal window in thelocal.[com|at|dk|fr|de|it|no|es|se|ch]",
 
   "icons": {
     "48": "icons/the_local-48.png"
@@ -12,7 +12,18 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.thelocal.[com|at|dk|fr|de|it|no|es|se|ch]/*"],
+      "matches": [
+          "*://*.thelocal.com/*",
+          "*://*.thelocal.at/*",
+          "*://*.thelocal.dk/*",
+          "*://*.thelocal.fr/*",
+          "*://*.thelocal.de/*",
+          "*://*.thelocal.it/*",
+          "*://*.thelocal.no/*",
+          "*://*.thelocal.es/*",
+          "*://*.thelocal.se/*",
+          "*://*.thelocal.ch/*"
+      ],
       "js": ["remove_subscribe.js"]
     }
   ],
