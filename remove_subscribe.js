@@ -5,35 +5,15 @@ function removeElementByClass(classname) {
     }
 }
 
-function exists(classname) {
-    return document.getElementsByClassName(classname)[0] != null;
-}
-
-var count = 0;
-
 // create an observer instance
-var observer = new MutationObserver(function(mutations, observer) {
+var observer = new MutationObserver(function(mutations, _) {
     mutations.forEach(function(mutation) {
-        console.log("hohoho");
         switch (mutation.type) {
             case "childList":
-                // Remove the modal windows
-                if (exists("tp-backdrop tp-active")) {
-                    removeElementByClass("tp-backdrop tp-active")
-                    count += 1
-                } else if (exists("tp-modal")) {
-                    removeElementByClass("tp-modal")
-                    count += 1
-                }
-                break;
-            default:
-                break;
-        }
-        if (count == 2) {
-            // Restore the scrollbar
-            document.getElementsByTagName("body")[0].classList.remove("tp-modal-open")
-            // you can stop observing
-            observer.disconnect();
+                // Remove the modal window
+                removeElementByClass("tp-modal")
+                // Show the hidden content
+                document.querySelectorAll('.piano-hide').forEach((elem) => elem.classList.remove('piano-hide'));
         }
     });
 });
