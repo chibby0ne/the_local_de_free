@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "the_local_de_free",
-  "version": "1.3",
+  "version": "1.4",
 
   "description": "Removes the modal window in thelocal.[com|at|dk|fr|de|it|no|es|se|ch]",
 
