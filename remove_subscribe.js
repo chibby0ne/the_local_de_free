@@ -12,8 +12,15 @@ var observer = new MutationObserver(function(mutations, _) {
             case "childList":
                 // Remove the modal window
                 removeElementByClass("tp-modal")
+                // Remove the modal window (used in thelocal.ch)
+                removeElementByClass("tp-backdrop")
                 // Show the hidden content
                 document.querySelectorAll('.piano-hide').forEach((elem) => elem.classList.remove('piano-hide'));
+                // Used in thelocal.ch
+                document.querySelectorAll('.tp-modal-open').forEach((elem) => elem.classList.remove('tp-modal-open'));
+                // Adds the scrollbar back
+                document.getElementsByTagName('body')[0].style.overflow = "auto";
+
         }
     });
 });
